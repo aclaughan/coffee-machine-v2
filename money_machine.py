@@ -2,12 +2,12 @@ class MoneyMachine:
     CURRENCY = "$"
 
     COIN_VALUES = \
-            [
-                { "name": "quarters", "value": 25 },
-                { "name": "dimes", "value": 10 },
-                { "name": "nickles", "value": 5 },
-                { "name": "pennies", "value": 1 }
-            ]
+        [
+            { "name": "quarters", "value": 25 },
+            { "name": "dimes", "value": 10 },
+            { "name": "nickles", "value": 5 },
+            { "name": "pennies", "value": 1 }
+        ]
 
     def __init__( self ):
         self.money_received = 0
@@ -29,7 +29,8 @@ class MoneyMachine:
                 { "name": "nickles", "value": 5 },
                 { "name": "pennies", "value": 1 }
             ]
-        print(f"A {selection} costs {self.CURRENCY}{cost:0.2f}\nPlease insert some coins.")
+        print(
+            f"A {selection} costs {self.CURRENCY}{cost:0.2f}\nPlease insert some coins.")
 
         coins_total = 0
 
@@ -44,6 +45,7 @@ class MoneyMachine:
                 if int(coins_total * 100) >= int(cost * 100):
                     change = coins_total - cost
                     if change:
-                        print(f"Here is your {self.CURRENCY}{change:0.2f} change")
+                        print(
+                            f"Here is your {self.CURRENCY}{change:0.2f} change")
                         self.money_received += cost
                         return

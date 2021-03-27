@@ -32,14 +32,6 @@ def main():
                 coffee_maker.make_coffee(options)
 
 
-    # change = collect_coins(selection)
-    # if change:
-    #     print(f"Here is your ${change:0.2f} change")
-    #
-    # make_the_coffee(selection)
-    # menu()
-
-
 if __name__ == '__main__':
     main()
 

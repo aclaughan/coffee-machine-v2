@@ -74,7 +74,6 @@ class Menu:
             if item.name == drink:
                 return item
 
-
     def find_drink( self, order_name ):
         """
         Searches the menu for a particular drink by name.
@@ -101,7 +100,7 @@ class Menu:
                       f"${i.cost:0.2f}")
             selection = input( \
                 "\nWhat would you like? (espresso/latte/cappuccino):\n  > "
-        ).lower()[:1]
+            ).lower()[:1]
 
         return self.expand_selection(selection)
 

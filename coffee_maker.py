@@ -1,5 +1,6 @@
 from art import cup
 
+
 class CoffeeMaker:
     """
     Models the machine that makes the coffee
@@ -30,7 +31,6 @@ class CoffeeMaker:
     def dots( self, string, width ):
         return width - len(string)
 
-
     def header( self, heading ):
         new_string = ''
         for character in heading.upper():
@@ -45,7 +45,7 @@ class CoffeeMaker:
         """
         Prints a report of all resources.
         """
-        header_width = self.header('coffee machine report') +4
+        header_width = self.header('coffee machine report') + 4
         print(f" resources available:\n")
 
         for i in self.resources:
@@ -56,8 +56,6 @@ class CoffeeMaker:
                 f"{self.resources[i]['amount']}" \
                 f"{self.resources[i]['unit']} "
             )
-
-
 
     def is_resource_sufficient( self, drink ):
         """
@@ -71,7 +69,6 @@ class CoffeeMaker:
                 can_make = False
 
         return can_make
-
 
     def make_coffee( self, order ):
         """
